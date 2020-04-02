@@ -1,0 +1,22 @@
+Dear Mohamed Samir ,,
+i wish this help you to run easy 
+requerment :
+
+1- mongo data base 
+2- java IDE "perfer intelliJ"+maven+JDK 11
+after install mongo
+
+1-Start your MongoDB database:
+
+To start MongoDB, you should open command prompt write :
+"C:\Program Files\MongoDB\Server\4.2\bin\mongod.exe" --dbpath="PUT PATH OF DataBase5, I SENT"
+
+2- Connect to MongoDB:
+To connect a mongo.exe shell to the MongoDB instance, open another Command Interpreter with Administrative privileges and run:
+
+run mongo.exe or "C:\Program Files\MongoDB\Server\4.2\bin\mongo.exe"
+
+you done dataBase issue
+ 
+if there any problem Please do not hesitate to contact me 01023699359 
+humam.fe@gmail.com
