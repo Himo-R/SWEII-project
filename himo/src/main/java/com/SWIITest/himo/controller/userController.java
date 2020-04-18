@@ -13,7 +13,7 @@ public class userController {
     @Autowired
     public mainService todoService;
     @GetMapping
-    public String greeting(){return  "wellcome API";}
+    public String greeting(){return  "<center><h1>wellcome API<h1> <br> <a href='/login'>Visit login!</a></center>";}
 
     @GetMapping("/listAllUsers")
     public List<user> listAllUsers() { return todoService.findAll(); }
@@ -31,13 +31,9 @@ public class userController {
    return todoService.Registration(obUser);
     }
 
-    @GetMapping("/test1")
-    public String t1(){
-        return "test11";
-    }
-    @GetMapping("/test2")
-    public String t29() {
-        return "test22";
+    @GetMapping("/UserPage")
+    public String homeUser(){
+        return "<h1>wellCome user</h1>";
     }
 
     /*
