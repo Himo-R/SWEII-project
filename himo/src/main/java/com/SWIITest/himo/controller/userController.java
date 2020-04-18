@@ -11,12 +11,13 @@ import java.util.List;
 @RequestMapping
 public class userController {
     @Autowired
-    public mainService todoService;
+    public mainService ObService;
+
     @GetMapping
-    public String greeting(){return  "<center><h1>wellcome API<h1> <br> <a href='/login'>Visit login!</a></center>";}
+    public String HomePage(){return  ObService.HomePage();}
 
     @GetMapping("/listAllUsers")
-    public List<user> listAllUsers() { return todoService.findAll(); }
+    public List<user> listAllUsers() { return ObService.findAll(); }
 
 /*
     @GetMapping("/{id}")
@@ -28,13 +29,14 @@ public class userController {
 
     @PostMapping(value = "/signUp")
     public boolean signUp(@RequestBody user obUser){
-   return todoService.Registration(obUser);
+    return ObService.Registration(obUser);
     }
 
     @GetMapping("/UserPage")
-    public String homeUser(){
-        return "<h1>wellCome user</h1>";
-    }
+    public String homeUser(){ return ObService.homeUser(); }
+
+    @GetMapping("/AdminPage")
+    public String homeAdmin(){ return ObService.homeAdmin(); }
 
     /*
     @DeleteMapping( value = "/{id}")
