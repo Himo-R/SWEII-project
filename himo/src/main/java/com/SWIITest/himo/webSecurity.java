@@ -31,12 +31,15 @@ public PasswordEncoder getPasswordEncoder(){
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .antMatchers("/test1").hasRole("USER")
-                .antMatchers("/test2").hasRole("ADMIN")
+                .antMatchers("/login").hasAnyRole("ADMIN","USER")
                 .antMatchers("/listAllUsers").hasRole("ADMIN")
+                .antMatchers("/signUp").permitAll()
+                .antMatchers("/User").hasRole("USER")
+                .antMatchers("/").permitAll()
+                .antMatchers("/**").authenticated()
                 .and().formLogin()
                 .and()
-                .csrf().disable();
+                .csrf().disable();//this for error when post request
 
     }
 
